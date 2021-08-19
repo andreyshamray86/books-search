@@ -14,7 +14,7 @@ const Content = () => {
             { 
             bookTitle ? 
                 books.map(book => {
-                   return <BookItem book={book.volumeInfo} key={book.id}/>
+                   return <BookItem book={book.volumeInfo} id={book.id} key={book.id}/>
                 })
                 : <p className='content__title'>Enter a book title above</p>
             }

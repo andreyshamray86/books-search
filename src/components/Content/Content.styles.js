@@ -19,9 +19,22 @@ const ContentStyled = styled.div`
         &__image {
             position: absolute;
             width: 100%;
+            height: min-content;
             z-index: 0;
         }
+    }
+    @media (max-width: 1600px) {
+        grid-template-columns: repeat(4, 1fr);
     }   
+    @media (max-width: 1100px) {
+        grid-template-columns: repeat(3, 1fr);
+    } 
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }         
 `
 
 export default ContentStyled;

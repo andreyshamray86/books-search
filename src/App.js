@@ -1,7 +1,9 @@
+import { Route } from "react-router-dom";
 import { BooksContextProvider } from "./context/BooksContext";
 
 import Header from "./components/Header/Header";
 import Content from "./components/Content/Content";
+import BookDetailed from "./components/BookDetailed/BookDetailed";
 
 import GlobalStyles from './helpers/GlobalStyles'
 import AppStyled from "./helpers/App.styles";
@@ -12,7 +14,9 @@ function App() {
       <AppStyled>
         <GlobalStyles/>
         <Header/>
-        <Content/>
+        <Route path='/' exact component={Content}/>
+        <Route path='/books/:id' component={BookDetailed}/>
+        {/* <Content/> */}
       </AppStyled>
     </BooksContextProvider>
   );

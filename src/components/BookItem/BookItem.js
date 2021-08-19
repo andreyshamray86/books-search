@@ -1,10 +1,11 @@
 import React from 'react'
+import { withRouter, Link } from 'react-router-dom'
 
 import BookItemStyled from './BookItem.styles'
 import book from '../../images/book.jpg'
 
 const BookItem = (props) => {
-    
+    const id = props.id;
     const {title, authors} = props.book;
     const image = props.book.imageLinks ? props.book.imageLinks.thumbnail : book;
     
@@ -14,10 +15,10 @@ const BookItem = (props) => {
             <div>
                 <h2>{title}</h2>
                 <p>Authors: {authors}</p>
-                <a href="">Read more</a>
+                <Link to={`/books/${id}`}>Read more</Link>
             </div>
         </BookItemStyled>
     )
 }
 
-export default BookItem
+export default withRouter(BookItem);
