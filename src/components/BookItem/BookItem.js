@@ -1,14 +1,19 @@
 import React from 'react'
 
 import BookItemStyled from './BookItem.styles'
+import book from '../../images/book.jpg'
 
-const BookItem = () => {
+const BookItem = (props) => {
+    console.log(props.book);
+    const {title, authors} = props.book;
+    const image = props.book.imageLinks ? props.book.imageLinks.thumbnail : book;
+    // console.log(image);
     return (
         <BookItemStyled>
-            <img src="https://source.unsplash.com/75S9fpDJVdo/300x510" alt="Picture by Kyle Cottrell"/>
+            <img src={image} alt="Picture by Kyle Cottrell"/>
             <div>
-                <h2>NASA Has Found Hundreds Of Potential New Planets</h2>
-                <p>Author: Steve</p>
+                <h2>{title}</h2>
+                <p>Authors: {authors}</p>
                 <a href="">Read more</a>
             </div>
         </BookItemStyled>

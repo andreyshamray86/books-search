@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const BookItemStyled = styled.div`
+	position: relative;
     width: 200px;
     height: 300px;
 	margin: 10px;
@@ -12,18 +13,27 @@ const BookItemStyled = styled.div`
     overflow: hidden;
     cursor: pointer;
 	&:hover {
+		background-color: #333333;
         img {
-            filter: brightness(0.5)
+            filter: brightness(0.3)
         }
 		div{
             transition: all 0.4s;
-            transform: translateY(-270px); 
+            transform: translateY(70px);
+			
         }
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
 	}
 
 	div {
         padding: 0 10px;
-        transform: translateY(-170px);
+        transform: translateY(400px);
         transition: all 0.4s;
 	}
 
@@ -31,7 +41,7 @@ const BookItemStyled = styled.div`
 		display: block;
         margin: 0;
 		font-size: 18px;
-		text-shadow: 0px 1px 5px black;
+		text-shadow: 0px 1px 10px black;
         color: #fff;
         text-align: center;
         margin-bottom: 15px;
@@ -43,6 +53,7 @@ const BookItemStyled = styled.div`
         color: #fff;
         text-align: center;
         margin-bottom: 25px;
+		text-shadow: 0px 1px 10px black;
 	}
 
 	a {
