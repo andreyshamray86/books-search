@@ -80,7 +80,7 @@ const HeaderStyled = styled.div`
     .placeholder {
         &::-webkit-input-placeholder  {
             color:#905252;
-            font-size: 20px;
+            font-size: 16px;
             -webkit-transition: all 0.2s ease;
             -ms-transition: all 0.2s ease;
             -moz-transition: all 0.2s ease;

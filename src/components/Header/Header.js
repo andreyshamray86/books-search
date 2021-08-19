@@ -6,12 +6,15 @@ import HeaderStyled from './Header.styles'
 import { BooksContext } from '../../context/BooksContext'
 
 const Header = () => {
-    const [,,bookTitle,setBookTitle, getBooks] = useContext(BooksContext);
+    const [,setBooks,bookTitle,setBookTitle, getBooks] = useContext(BooksContext);
     
     const changeTitle = (e) => {
         setBookTitle(e.target.value);
+        if(!bookTitle) {
+            setBooks([]);
+        }
     }
-    console.log(bookTitle);
+
     return (
         <HeaderStyled>
             <h1>Books Search</h1>
@@ -19,7 +22,7 @@ const Header = () => {
                 <input 
                     className='placeholder' 
                     type="text" 
-                    placeholder='Enter a book title'
+                    placeholder='Enter a book title here...'
                     value={bookTitle}
                     onChange={changeTitle}
                 />

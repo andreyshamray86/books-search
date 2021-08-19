@@ -11,7 +11,6 @@ export const BooksContextProvider = ({children}) => {
         axios(`https://www.googleapis.com/books/v1/volumes?q=${bookTitle}&maxResults=18&key=${process.env.REACT_APP_BOOKS_API_KEY}`)
         .then(res => {
             setBooks([...res.data.items]);
-            
         })
         .catch(err => console.log(err))
     }

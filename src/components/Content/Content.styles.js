@@ -1,14 +1,27 @@
 import styled from "styled-components";
 
-import content from '../../images/content.jpg'
-
 const ContentStyled = styled.div`
-    height: 70%;
-    background: url(${content}) center center no-repeat;
+    position: relative;
     padding: 50px 100px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
+    .content {
+        &__title {
+            display: block;
+            grid-column: 3/5;
+            color:#905252; 
+            font-size: 36px;
+            margin: 0 auto;
+            z-index: 10;
+        }
+
+        &__image {
+            position: absolute;
+            width: 100%;
+            z-index: 0;
+        }
+    }   
 `
 
 export default ContentStyled;
