@@ -28,8 +28,15 @@ const HeaderStyled = styled.div`
             position: absolute;
             top: 12px;
             left: 24%;
+            @media (max-width: 1100px) {
+            left: 23%;
+            }
+            @media (max-width: 600px) {
+                left: 21%;
+            }     
         }
-    }
+    } 
+
     input {
         display: block;
         margin: 0 auto;

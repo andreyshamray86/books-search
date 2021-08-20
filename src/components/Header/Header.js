@@ -15,6 +15,12 @@ const Header = () => {
         }
     }
 
+    const pressEnter = (e) => {
+        if(e.key === 'Enter') {
+            getBooks();
+        }
+    }
+
     return (
         <HeaderStyled>
             <h1>Books Search</h1>
@@ -25,6 +31,7 @@ const Header = () => {
                     placeholder='Enter a book title here...'
                     value={bookTitle}
                     onChange={changeTitle}
+                    onKeyPress={pressEnter}
                 />
             </div>
             <button type="submit" onClick={getBooks}>Search book...</button>

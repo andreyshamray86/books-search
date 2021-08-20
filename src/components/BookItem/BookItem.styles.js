@@ -19,7 +19,7 @@ const BookItemStyled = styled.div`
         }
 		div{
             transition: all 0.4s;
-            transform: translateY(70px);
+            transform: translateY(40px);
 			
         }
 	}
@@ -40,11 +40,11 @@ const BookItemStyled = styled.div`
 	h2 {
 		display: block;
         margin: 0;
-		font-size: 18px;
+		font-size: 16px;
 		text-shadow: 0px 1px 10px black;
         color: #fff;
         text-align: center;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
 	}
 
 	p {
@@ -52,7 +52,7 @@ const BookItemStyled = styled.div`
 		font-size: 14px;
         color: #fff;
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
 		text-shadow: 0px 1px 10px black;
 	}
 

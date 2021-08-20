@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import BookDetailedStyled from './BookDetailed.styles';
+import Loader from '../Loader/Loader';
 import bookImage from '../../images/book.jpg'
+import content from '../../images/content.jpg'
 
 const BookDetailed = (props) => {
 
@@ -20,12 +22,13 @@ const BookDetailed = (props) => {
 
     let image;
     if(book) {
-        image = book.imageLinks ? book.imageLinks.medium : bookImage;
+        image = book.imageLinks ? book.imageLinks.thumbnail : bookImage;
     }
 
     
     return (
         <BookDetailedStyled>
+            <img className="detailed__image" src={content} alt="" />
             {
                 book ? 
                 <>
@@ -44,7 +47,7 @@ const BookDetailed = (props) => {
                     </div>  
                 </>
                     
-                 : <p>Loading...</p>
+                 : <Loader/>
             }
             
         </BookDetailedStyled>

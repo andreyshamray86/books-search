@@ -12,7 +12,7 @@ const Content = () => {
         <ContentStyled>
             <img className="content__image" src={content} alt="" />
             { 
-            bookTitle ? 
+            bookTitle && books.length > 0 ? 
                 books.map(book => {
                    return <BookItem book={book.volumeInfo} id={book.id} key={book.id}/>
                 })
